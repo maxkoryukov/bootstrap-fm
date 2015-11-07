@@ -1,0 +1,25 @@
+// styles
+
+@trianlge_size: 1em;
+
+.mk-label-down(@bgcolor: @gray-light)
+{
+	display:inline-block;
+	position:relative;
+	margin-bottom: @trianlge_size;
+
+	&:before
+	{
+		content:'';
+		position: absolute;
+		width: 0;
+		height: 0;
+		top:100%;
+		left:50%;
+		margin-left: -@trianlge_size;
+		border-width: @trianlge_size @trianlge_size 0 @trianlge_size;
+		border-style: solid;
+		border-color: transparent;
+		border-top-color: @bgcolor;
+	}
+}
